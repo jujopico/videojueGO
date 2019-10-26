@@ -20,3 +20,37 @@ nav a {
 nav a.active {
   color:#bada55;
 }
+
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.game > img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 25px
+}
+
+
+.results a {
+  color: bue;
+  text-decoration: none;
+}
+
+.game {
+  display: grid;
+  place-items: center;
+}
+
+.game h3 {
+  text-align: center;
+  white-space: nowrap;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

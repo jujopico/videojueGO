@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../App.css'
 
 class GameList extends React.Component {
 
@@ -13,7 +14,6 @@ class GameList extends React.Component {
   }
 
   render() {
-      console.log(this.state.games)
     return(
       <div className="game-list">
         <h1>Search for a game</h1>
@@ -29,7 +29,7 @@ class GameList extends React.Component {
               <Link key={game.id} to={`/games/${game.id}`}>
                 <div className="game">
                   <h3>{game.name}</h3>
-                  <img src={game.background_image} alt={game.name} />
+                  <img src={game.background_image} alt={game.name}/>
                 </div>
               </Link>
             ))
