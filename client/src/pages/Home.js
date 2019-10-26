@@ -1,8 +1,30 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 
-const Home = () => (
-    <div className="home">
-        <h1>This is the Home Page</h1>
-    </div>
-)
-export default Home
+class MyComponent extends React.Component {
+    state = {
+      redirect: false
+    }
+    setRedirect = () => {
+      this.setState({
+        redirect: true
+      })
+    }
+    renderRedirect = () => {
+      if (this.state.redirect) {
+        return <Redirect to='/games' />
+      }
+    }
+    render () {
+      return (
+         
+         
+         <div>
+         
+          {this.renderRedirect()}
+          <button className='startSearching'onClick={this.setRedirect}>LETS START SEARCHING</button>
+         </div>
+      )
+    }
+  }
+export default MyComponent
