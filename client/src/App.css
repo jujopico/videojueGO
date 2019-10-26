@@ -1,15 +1,22 @@
-/* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
-
-#demo{
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
 }
 
-#demo h1{
-  display: grid;
-  place-items: center;
+nav ul li {
+  padding: 1rem 0.5rem;
 }
 
-/* END DEMO */
+nav {
+  background-color: black;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  color:#bada55;
+}
