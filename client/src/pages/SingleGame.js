@@ -5,4 +5,7 @@ const SingleGame = () => (
         <h1>This is the Single Game Page</h1>
     </div>
 )
+const randomGame = () => (
+
+)
 export default SingleGame
