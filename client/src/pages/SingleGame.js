@@ -1,37 +1,50 @@
 import React from 'react'
 
 class SingleGame extends React.Component {
-  state = { game: [] }
+  state = { game: {} }
 
+
+  //Go to our server
   fetchGame = () => {
-    fetch(`https://api.rawg.io/api/games/${this.props.match.params.id}`)
+    fetch(`/game/${this.props.match.params.id}`)
       .then(response => response.json())
-      .then(game => this.setState({ game })
-        )
+      .then(game => this.setState({ game }))
   }
 
   render(){
+    const { game } = this.state;
     return(
       <div className="single-game">
-        <h1>{this.state.game.name}</h1>
         <div className="game-data">
-          <img src={this.state.game.background_image} alt={this.state.game.name}/>
-           { <table>
-            <tbody>
-              {
-                ["Name", "Year", "Rating", "Platform", "Description", "genres"].map(dataPoint => (
-                  <tr key={dataPoint}>
-                    <td>{dataPoint}</td>
-                    <td>{this.state.game.name}</td>
-                  </tr>
-                ))
-              }
-              {/* <tr>
-                <td>Rating</td>
-                <td>{this.state.game.Metascore}/100</td>
-              </tr> */}
-            </tbody>
-          </table>}
+          <img height="600px" src={game.background_image} alt={game.name}/>
+          <h1>{game.name}</h1>
+          <table>
+            <tr>
+              <td>Platforms:</td>
+              <td>{game.platforms && game.platforms.map(platformObj => <p>{platformObj.platform.name}</p>)}</td>
+            </tr>
+            <tr>{
+              game.metacritic ?(
+                <>
+                <td>Metacritic Rating:</td>
+                <td>{game.metacritic / 100}</td>
+                </>
+              ) : null
+            }
+            </tr>
+            <tr>
+              <td>Description:</td>
+              <td>{game.description_raw}</td>
+            </tr>
+            <tr>
+              <td>Developers:</td>
+              <td>{game.developers && game.developers.map(developer => <p>{developer.name}</p>)}</td>
+            </tr>
+            <tr>
+              <td>Publishers:</td>
+              <td>{game.publishers && game.publishers.map(publisher => <p>{publisher.name}</p>)}</td>
+            </tr>
+          </table>
         </div>
 
       </div>

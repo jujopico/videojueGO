@@ -8,7 +8,7 @@ import Navbar from './components/Navbar'
 
 const App = () => (
   <BrowserRouter>
-    <Navbar/>
+    <Navbar />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/games" component={GameList} />
