@@ -28,7 +28,7 @@ class GameList extends React.Component {
             this.state.games.map(game => (
               <Link key={game.id} to={`/games/${game.id}`}>
                 <div className="game">
-                  <h3>{game.name}</h3>
+                  <h6>{game.name}</h6>
                   <img src={game.background_image} alt={game.name}/>
                 </div>
               </Link>
