@@ -50,3 +50,14 @@ nav a.active {
   text-overflow: ellipsis;
 }
 
+ .home{
+  display: grid;
+  place-content: center;
+
+}
+.startSearching{
+  height:200px;
+  width:200px;
+  
+
+}
