@@ -4,7 +4,7 @@ class SingleGame extends React.Component {
   state = { game: [] }
 
   fetchGame = () => {
-    fetch(`https://api.rawg.io/api/games/${this.props.match.params.id}`)
+    fetch(`/api/games/${this.props.match.params.id}`)
       .then(response => response.json())
       .then(game => this.setState({ game })
         )
@@ -19,17 +19,17 @@ class SingleGame extends React.Component {
            { <table>
             <tbody>
               {
-                ["released", "rating", "platforms"].map(dataPoint => (
+                ["Name", "Year", "Rating", "Platform", "Description", "genres"].map(dataPoint => (
                   <tr key={dataPoint}>
                     <td>{dataPoint}</td>
                     <td>{this.state.game[dataPoint]}</td>
                   </tr>
                 ))
               }
-              <tr>
+              {/* <tr>
                 <td>Rating</td>
                 <td>{this.state.game.Metascore}/100</td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>}
         </div>
