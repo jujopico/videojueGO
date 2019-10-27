@@ -8,7 +8,7 @@ class GameList extends React.Component {
 
   handleSearch = event => {
     event.preventDefault()
-    fetch(`https://api.rawg.io/api/games?search=${event.target.value}`)
+    fetch(`/games/${event.target.value}`)
       .then(response => response.json())
       .then(data => this.setState({ games: data.results || [] }))
   }
@@ -28,7 +28,7 @@ class GameList extends React.Component {
             this.state.games.map(game => (
               <Link key={game.id} to={`/games/${game.id}`}>
                 <div className="game">
-                  <h3>{game.name}</h3>
+                  <h6>{game.name}</h6>
                   <img src={game.background_image} alt={game.name}/>
                 </div>
               </Link>
