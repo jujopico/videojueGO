@@ -1,5 +1,5 @@
 import React from 'react'
-import homeLogo from '../images/homeLogo.png'
+import Placeholder from '../components/Placeholder'
 
 class SingleGame extends React.Component {
   state = { game: {} }
@@ -13,9 +13,9 @@ class SingleGame extends React.Component {
   render(){
     const { game } = this.state;
     return(
-      <div className="single-game">
+      <div className="single-game container">
         <div className="game-data">
-          <img height="600px" src={game.background_image ? game.background_image : homeLogo } alt={game.name}/>
+          {game.background_image ? <img className="z-depth-2" height="600px" src={ game.background_image } alt={game.name}/> : <Placeholder /> }
           <h1>{game.name}</h1>
           <table>
             <tbody>
