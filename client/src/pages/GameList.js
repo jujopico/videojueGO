@@ -15,7 +15,7 @@ const debounce = (fn, delay) => {
 
 class GameList extends React.Component {
 
-  state = { games: [], searchTerm:"" }
+  state = { games: [], searchTerm: "" }
 
   handleInputChange = (event) => {
     let searchTerm = event.target.value
@@ -27,7 +27,7 @@ class GameList extends React.Component {
     const {searchTerm}= this.state
     const {data} = await axios.get(`/games/${searchTerm}`)
     this.setState({ games: data.results || [] })
-  }, 1000) 
+  }, 500) 
 
   render() {
     return(
@@ -53,14 +53,6 @@ class GameList extends React.Component {
       </div>
     )
   }
-
-//   componentDidMount(){
-//     this.timer = setInterval(this.handleSearch, 5000)
-//   }
-
-//   componentWillUnmount(){
-//     clearInterval(this.timer)
-//   }
 }
 
 export default GameList
