@@ -1,17 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import cutie from "../images/cutie.jpg"
 import '../App.css'
+import axios from 'axios'
+
+const debounce = (fn, delay) => {
+  let timer
+  return function(...args){
+    const context = this
+    timer && clearTimeout(timer);
+    timer = setTimeout(_=> fn.apply(context, args), delay);
+  }
+}
 
 class GameList extends React.Component {
 
-  state = { games: [] }
+  state = { games: [], searchTerm:"" }
 
-  handleSearch = event => {
-    event.preventDefault()
-    fetch(`/games/${event.target.value}`)
-      .then(response => response.json())
-      .then(data => this.setState({ games: data.results || [] }))
+  handleInputChange = (event) => {
+    let searchTerm = event.target.value
+    if (searchTerm.trim().length === 0) searchTerm = "matchington mansion"
+    this.setState({ searchTerm }, this.handleSearch)
   }
+
+  handleSearch = debounce(async event => {
+    const {searchTerm}= this.state
+    const {data} = await axios.get(`/games/${searchTerm}`)
+    this.setState({ games: data.results || [] })
+  }, 1000) 
 
   render() {
     return(
@@ -19,9 +35,8 @@ class GameList extends React.Component {
         <h1>Search for a game</h1>
         <input
           type="text"
-          onChange={this.handleSearch}
+          onChange={this.handleInputChange}
         />
-
 
         <div className="results">
           {
@@ -29,7 +44,7 @@ class GameList extends React.Component {
               <Link key={game.id} to={`/games/${game.id}`}>
                 <div className="game">
                   <h6>{game.name}</h6>
-                  <img src={game.background_image} alt={game.name}/>
+                  <img src={game.background_image ? game.background_image : cutie } alt={game.name}/>
                 </div>
               </Link>
             ))
@@ -38,6 +53,14 @@ class GameList extends React.Component {
       </div>
     )
   }
+
+//   componentDidMount(){
+//     this.timer = setInterval(this.handleSearch, 5000)
+//   }
+
+//   componentWillUnmount(){
+//     clearInterval(this.timer)
+//   }
 }
 
 export default GameList
