@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import AboutUs from './pages/AboutUs'
 
+
 const App = () => (
   <BrowserRouter>
     <Navbar />

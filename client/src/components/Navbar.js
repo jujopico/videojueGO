@@ -1,14 +1,18 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
+import homeLogo from '../images/logo.png'
+import { withRouter } from "react-router";
 
-const Navbar = () => (
-  <nav>
-    <ul>
-     <li><NavLink to="/">Home</NavLink></li>
-     <li><NavLink to="/games">Games</NavLink></li>
-     <li><NavLink to="/AboutUs">About Us</NavLink></li>
-    </ul>
+const Navbar = props => {
+  return(
+    <nav>
+      <NavLink to="/">
+        <img className="LOGO" src={homeLogo} alt="videojueGO" />
+      </NavLink>
+    <NavLink className={props.location.pathname === "/games" ? "active" : null} to="/games">Search Games</NavLink>
+    <NavLink className={props.location.pathname === "/AboutUs" ? "active" : null} to="/AboutUs">About Us</NavLink>
   </nav>
-)
+  )
+}
 
-export default Navbar
+export default withRouter(Navbar)
