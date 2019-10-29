@@ -14,7 +14,6 @@ const debounce = (fn, delay) => {
 }
 
 class GameList extends React.Component {
-
   state = { games: [], searchTerm: "" }
 
   handleInputChange = (event) => {
