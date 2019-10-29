@@ -5,19 +5,36 @@ nav ul {
 }
 
 nav {
-  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  place-items: flex-start;
+  align-items: center;
+  height: 80px;
+  background-color: rgba(161,195,240, 0.8);
+  z-index: 3;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  margin: 0 24px;
+  display: flex;
 }
 
-nav a.active {
+.active {
   color:#bada55;
 }
 
+nav > img {
+  margin-left: 32px;
+}
 
+.logo{ 
+  padding-top: 20px
+}
 .results {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -30,7 +47,6 @@ nav a.active {
   object-fit: cover;
   border-radius: 25px
 }
-
 
 .results a {
   color: bue;
@@ -50,14 +66,49 @@ nav a.active {
   text-overflow: ellipsis;
 }
 
- .home{
+.root{
   display: grid;
-  place-content: center;
-
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
+
+.home .game-list .single-game{
+  padding-top: 200px;
+  grid-area: 1 / 2 / 6 / 5;
+}
+
 .startSearching{
   height:200px;
   width:200px;
-  
+}
 
+.game-data {
+  padding-top: 50px;
+}
+
+button {
+  height: 10%;
+  margin: 10px;
+  width: 90px;
+  padding-right: 50px;
+}
+
+h1 {
+  margin: auto;
+  font-family: 'Fredoka One', cursive;
+}
+
+.home{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-div{
+  display: flex;
+  margin: auto;
 }

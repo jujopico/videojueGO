@@ -1,4 +1,17 @@
 body {
-  margin: 0;
+  margin: 100px 0 0 0;
   padding: 0;
+  background-image: url('./images/mario-bkg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(161,195,240);
+  height: 100vh;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+#root{
+  height: 100%;
+  width: 100%;
 }

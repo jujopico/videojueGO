@@ -6,13 +6,14 @@ import SingleGame from './pages/SingleGame'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 
+
 const App = () => (
   <BrowserRouter>
     <Navbar />
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/games" component={GameList} />
-      <Route path="/games/:id" component={SingleGame} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/games" component={GameList} />
+        <Route path="/games/:id" component={SingleGame} />
     </Switch>
   </BrowserRouter>
 )
