@@ -9,11 +9,11 @@ const Singlegamebody = (props) => {
             <div className="game-data">
                 <img className="z-depth-2" height="600px" src={ game.background_image ? game.background_image : cutie } alt={game.name}/>
                 <h1>{game.name}</h1>
-                <div>
-                <h5>Platforms:</h5>
-                <p>{game.platforms && game.platforms.map(platformObj => <p key={platformObj.platform.name}>{platformObj.platform.name}</p>)}</p>
+                <div className="platforms">
+                <h5 >Platforms:</h5>
+                {game.platforms && game.platforms.map(platformObj => <p key={platformObj.platform.name}>{platformObj.platform.name}</p>)}
                 </div>
-                <div>
+                <div className="metacritic">
                 {
                 game.metacritic ?(
                     <>
@@ -23,17 +23,17 @@ const Singlegamebody = (props) => {
                 ) : null
                 }
                 </div>
-                <div>
+                <div className="description">
                 <h5>Description:</h5>
                 <p>{game.description_raw}</p>
                 </div>
-                <div>
+                <div className="developers">
                 <h5>Developers:</h5>
-                <p>{game.developers && game.developers.map(developer => <p key={developer.name}>{developer.name}</p>)}</p>
+                {game.developers && game.developers.map(developer => <p key={developer.name}>{developer.name}</p>)}
                 </div>
-                <div>
+                <div className="publishers">
                 <h5>Publishers:</h5>
-                <p>{game.publishers && game.publishers.map(publisher => <p key={publisher.name}>{publisher.name}</p>)}</p>
+                {game.publishers && game.publishers.map(publisher => <p key={publisher.name}>{publisher.name}</p>)}
                 </div>
             </div>
         </div>

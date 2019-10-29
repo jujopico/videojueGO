@@ -17,7 +17,6 @@ nav a.active {
   color:#bada55;
 }
 
-
 .results {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -31,9 +30,12 @@ nav a.active {
   border-radius: 25px
 }
 
+.game-data > img {
+  object-fit: cover;
+}
 
 .results a {
-  color: bue;
+  color: blue;
   text-decoration: none;
 }
 
@@ -53,11 +55,29 @@ nav a.active {
  .home{
   display: grid;
   place-content: center;
-
 }
+
 .startSearching{
   height:200px;
   width:200px;
-  
+}
 
+.platforms {
+ background-color: #e8f5e9;
+}
+
+.metacritic {
+  background-color: #c8e6c9;
+}
+
+.description {
+  background-color: #a5d6a7;
+}
+
+.developers {
+  background-color: #81c784;
+}
+
+.publishers {
+  background-color: #66bb6a;
 }
