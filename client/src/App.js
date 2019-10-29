@@ -5,15 +5,17 @@ import GameList from './pages/GameList'
 import SingleGame from './pages/SingleGame'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
+import AboutUs from './pages/AboutUs'
 
 
 const App = () => (
   <BrowserRouter>
     <Navbar />
     <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/games" component={GameList} />
-        <Route path="/games/:id" component={SingleGame} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/games" component={GameList} />
+      <Route path="/games/:id" component={SingleGame} />
+      <Route path="/AboutUs" component={AboutUs} />
     </Switch>
   </BrowserRouter>
 )

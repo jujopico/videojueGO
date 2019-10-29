@@ -4,14 +4,13 @@ import homeLogo from '../images/logo.png'
 import { withRouter } from "react-router";
 
 const Navbar = props => {
-  console.log(props)
   return(
     <nav>
       <NavLink to="/">
         <img className="LOGO" src={homeLogo} alt="videojueGO" />
       </NavLink>
     <NavLink className={props.location.pathname === "/games" ? "active" : null} to="/games">Search Games</NavLink>
-    <NavLink className={props.location.pathname === "/aboutUs" ? "active" : null} to="/aboutUs">About Us</NavLink>
+    <NavLink className={props.location.pathname === "/AboutUs" ? "active" : null} to="/AboutUs">About Us</NavLink>
   </nav>
   )
 }
