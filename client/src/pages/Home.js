@@ -9,6 +9,7 @@ const Home = props => {
     props.history.push(`/games/${favoriteGames[id]}`)}
 
 return (
+    <>
     <div className= "home">
       <h1>Welcome to videojueGO!</h1>
       <div className="button-div">

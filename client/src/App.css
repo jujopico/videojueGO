@@ -101,9 +101,10 @@ h1 {
   justify-content: center;
 }
 
-.button-div{
+.button-div {
   display: flex;
   margin: auto;
+}
   
 .platforms {
  background-color: #e8f5e9;
