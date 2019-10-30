@@ -18,7 +18,7 @@ const AboutUs = () => {
             <li>Karen Molina</li>
         </ul>
         </div>
-        </>
+      </>
     )
   }
 
