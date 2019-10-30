@@ -20,14 +20,11 @@ return (
         Search for a Game!
         </button>
         <button
-        className="waves-effect waves-light btn-large randomGameButton"
+        className="waves-effect waves-light btn-large"
         onClick={handleRandomGame}
         >Surprise Me!
         </button>
       </div>
-    </div>
-    <div>
-      <button className="randomGameButton" onClick={handleRandomGame}>Random Game</button>
     </div>
     </>
   )
