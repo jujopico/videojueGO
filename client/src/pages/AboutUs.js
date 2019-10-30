@@ -2,6 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
     return (
+        <>
         <div className="students-container">
             <h1>Meet the Students!</h1>
             <div className="student-categories">
