@@ -7,7 +7,7 @@ const Singlegamebody = (props) => {
     return(
         <div className="single-game">
             <div className="game-data">
-                <img className="z-depth-2" width="100%" src={ game.background_image ? game.background_image : cutie } alt={game.name}/>
+                <img className="z-depth-2" width="100%" height="100%" src={ game.background_image ? game.background_image : cutie } alt={game.name}/>
                 <h1>{game.name}</h1>
                 <div className="platforms">
                 <h5 >Platforms:</h5>
@@ -18,7 +18,7 @@ const Singlegamebody = (props) => {
                 game.metacritic ?(
                     <>
                     <h5>Metacritic Rating:</h5>
-                    <p>{game.metacritic}</p>
+                    <p>{game.metacritic}/100</p>
                     </>
                 ) : null
                 }
