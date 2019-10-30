@@ -35,6 +35,8 @@ class GameList extends React.Component {
         <input
           type="text"
           onChange={this.handleInputChange}
+          id="user-input"
+          autoComplete="off"
         />
 
         <div className="results">

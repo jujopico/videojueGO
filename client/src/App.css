@@ -43,10 +43,11 @@ nav > img {
 }
 
 .game > img {
-  width: 300px;
+  width: 270px;
   height: 350px;
   object-fit: cover;
-  border-radius: 25px
+  border-radius: 25px;
+  opacity: 100%;
 }
 
 .results a {
@@ -144,6 +145,12 @@ h1 {
 
 .publishers {
   background-color: #66bb6a;
+  
+#user-input {
+  width: 570px;
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 2rem;
   border-radius: 5px;
   opacity: 0.85
 }
@@ -164,7 +171,8 @@ input {
   font-size: 30px !important; 
 }
 
-h5 {
+h5 {  
+  margin: 0;
   padding-top: 10px;
   padding-bottom: 10px
 }
