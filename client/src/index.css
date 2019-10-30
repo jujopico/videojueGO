@@ -1,5 +1,5 @@
 body {
-  margin: 100px 0 0 0;
+  margin: 120px 0 0 0;
   padding: 0;
   background-image: url('./images/mario-bkg.jpg');
   background-position: center center;
@@ -7,8 +7,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-color: rgb(161,195,240);
-  height: 100vh;
+  height: 80vh;
   font-family: 'Titillium Web', sans-serif;
+  text-align:center;
 }
 
 #root{

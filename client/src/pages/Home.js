@@ -26,9 +26,6 @@ return (
         </button>
       </div>
     </div>
-    <div>
-      <button className="randomGameButton" onClick={handleRandomGame}>Random Game</button>
-    </div>
     </>
   )
 }

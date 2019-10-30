@@ -25,7 +25,7 @@ nav a {
 }
 
 .active {
-  color:#bada55;
+  color:#C46E18;
 }
 
 
@@ -36,6 +36,7 @@ nav > img {
 .logo{ 
   padding-top: 20px
 }
+
 .results {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,14 +44,15 @@ nav > img {
 }
 
 .game > img {
-  width: 300px;
+  width: 270px;
   height: 350px;
   object-fit: cover;
-  border-radius: 25px
+  border-radius: 25px;
+  opacity: 100%;
 }
 
 .results a {
-  color: blue;
+  color: black;
   text-decoration: none;
 }
 
@@ -86,6 +88,14 @@ button {
   margin: 10px;
   width: 90px;
   padding-right: 50px;
+  border-radius: 8% !important
+}
+
+.btn, .btn-large, .btn-small {
+  background-color: #C76E07;
+  font-size: smaller;
+  width: 200px;
+  margin-bottom: 180px;
 }
 
 h1 {
@@ -94,6 +104,14 @@ h1 {
 }
 
 .home{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us .game-list{
   height: 100%;
   width: 100%;
   display: flex;
@@ -124,4 +142,15 @@ h1 {
 
 .publishers {
   background-color: #66bb6a;
+}
+
+h5 {
+  margin: 0;
+}
+
+#user-input {
+  width: 500px;
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 2rem;
 }
