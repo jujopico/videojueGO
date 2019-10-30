@@ -186,3 +186,14 @@ p {
 .z-depth-2 {
   border-radius: 5px
 }
+
+#user-input {
+  width: 570px;
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 2rem;
+  background-color:rgba(186, 218, 85, 0.45);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
