@@ -20,7 +20,6 @@ const AboutUs = () => {
                 </ul>
             </div>
         </div>
-      </>
     )
   }
 
