@@ -19,6 +19,7 @@ const Singlegamebody = (props) => {
                 })
                 }
                 </div>
+                <br/>
                 <div className="metacritic">
                 {
                 game.metacritic ?(
@@ -42,6 +43,7 @@ const Singlegamebody = (props) => {
                     return <span key={developer.name}>{developer.name}, </span>})
                 }
                 </div>
+                <br/>
                 <div className="publishers">
                 <h5>Publishers:</h5>
                 {game.publishers && game.publishers.map((publisher, i) => {
