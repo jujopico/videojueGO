@@ -3,7 +3,10 @@ nav ul {
   list-style-type: none;
   margin: 0;
 }
-
+nav .LOGO:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
 nav {
   position: fixed;
   top: 0;
@@ -97,7 +100,7 @@ button {
   background-color: #C76E07;
   font-size: smaller;
   width: 200px;
-  margin-top: 150px;
+  margin-top: 40%;
 }
 
 h1 {

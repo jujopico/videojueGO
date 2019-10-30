@@ -11,7 +11,13 @@ const Singlegamebody = (props) => {
                 <h1>{game.name}</h1>
                 <div className="platforms">
                 <h5 >Platforms:</h5>
-                {game.platforms && game.platforms.map(platformObj => <p key={platformObj.platform.name}>{platformObj.platform.name}</p>)}
+                {game.platforms && game.platforms.map((platformObj, i) => {
+                    if (i === game.platforms.length-1){
+                        return <span key={platformObj.platform.name}>{platformObj.platform.name}</span>
+                    }
+                    return <span key={platformObj.platform.name}>{platformObj.platform.name}, </span>
+                })
+                }
                 </div>
                 <div className="metacritic">
                 {
@@ -29,11 +35,21 @@ const Singlegamebody = (props) => {
                 </div>
                 <div className="developers">
                 <h5>Developers:</h5>
-                {game.developers && game.developers.map(developer => <p key={developer.name}>{developer.name}</p>)}
+                {game.developers && game.developers.map((developer, i) => {
+                    if(i === game.developers.length -1){
+                        return <span key={developer.name}>{developer.name}</span>
+                    }
+                    return <span key={developer.name}>{developer.name}, </span>})
+                }
                 </div>
                 <div className="publishers">
                 <h5>Publishers:</h5>
-                {game.publishers && game.publishers.map(publisher => <p key={publisher.name}>{publisher.name}</p>)}
+                {game.publishers && game.publishers.map((publisher, i) => {
+                    if(i === game.publishers.length -1){
+                        return <span key={publisher.name}>{publisher.name}</span>
+                    }
+                    return <span key={publisher.name}>{publisher.name}, </span>})
+                }
                 </div>
             </div>
         </div>
