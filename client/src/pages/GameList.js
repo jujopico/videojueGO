@@ -18,7 +18,7 @@ class GameList extends React.Component {
 
   handleInputChange = (event) => {
     let searchTerm = event.target.value
-    if (searchTerm.trim().length === 0) searchTerm = "matchington mansion"
+    if (searchTerm.trim().length === 0) searchTerm = "Mario + Rabbids Kingdom Battle"
     this.setState({ searchTerm }, this.handleSearch)
   }
 

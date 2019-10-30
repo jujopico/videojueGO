@@ -58,6 +58,10 @@ nav > img {
 .game {
   display: grid;
   place-items: center;
+  transition: transform 0.2s; 
+}
+.game:hover{
+  transform: scale(1.1)
 }
 
 .game h6 {
@@ -156,7 +160,7 @@ h1 {
   font-family: 'Fredoka One', sans-serif;
   font-size: 2rem;
   border-radius: 5px;
-  opacity: 0.85
+  opacity: 0.85;
 }
 
 .studentname {
@@ -191,6 +195,7 @@ p {
   border-radius: 5px
 }
 
+
 .student-categories {
   background-color:  rgba(186, 218, 85, 0.45);
   width: 575px;
@@ -200,3 +205,12 @@ p {
   font-size: 1.5rem;
 }
 
+#user-input {
+  width: 570px;
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 2rem;
+  background-color:rgba(186, 218, 85, 0.45);
+  border-radius: 8px;
+  margin-top: 10px;
+}
