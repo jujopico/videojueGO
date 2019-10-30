@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <div className="students-container">
             <h1>Meet the Students!</h1>
-            <div className="student-name">
+            <div className="student-categories">
                 <label htmlFor="developers">Developers</label>
                 <ul>
                     <li>Brendan Guralsky</li>
