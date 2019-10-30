@@ -9,7 +9,7 @@ const AboutUs = () => {
         <ul>
             <li>Brendan Guralsky</li>
             <li>Daniel A Perez</li>
-            <li>Jennifer Jordan</li>
+            <li className="jen">Jennifer Jordan</li>
             <li>Jun Su</li>
         </ul>
         <label htmlFor="desingers">Designers</label>
@@ -18,7 +18,7 @@ const AboutUs = () => {
             <li>Karen Molina</li>
         </ul>
         </div>
-        </>
+      </>
     )
   }
 

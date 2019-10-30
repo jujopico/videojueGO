@@ -43,10 +43,11 @@ nav > img {
 }
 
 .game > img {
-  width: 300px;
+  width: 270px;
   height: 350px;
   object-fit: cover;
-  border-radius: 25px
+  border-radius: 25px;
+  opacity: 100%;
 }
 
 .results a {
@@ -148,6 +149,12 @@ h1 {
 
 .publishers {
   background-color: #66bb6a;
+  
+#user-input {
+  width: 570px;
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 2rem;
   border-radius: 5px;
   opacity: 0.85;
 }
@@ -168,7 +175,8 @@ input {
   font-size: 30px !important; 
 }
 
-h5 {
+h5 {  
+  margin: 0;
   padding-top: 10px;
   padding-bottom: 10px
 }
@@ -183,27 +191,12 @@ p {
   border-radius: 5px
 }
 
-
-
-
-
-
-/* .game:hover{
-  animation: shake 0.5s;
-  animation-iteration-count:infinite;
+#user-input {
+  width: 570px;
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 2rem;
+  background-color:rgba(186, 218, 85, 0.45);
+  border-radius: 8px;
+  margin-top: 10px;
 }
-
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-} */
