@@ -3,7 +3,7 @@
 <img width="1440" alt="videojuego" src="https://user-images.githubusercontent.com/55222951/71999746-f97f7700-320f-11ea-89fb-cee0ac054d97.png">
 
 ## Description
-A video game search engine based on RAWG games database API, Axios and React.js, which allows users to look up detailed game information.
+A video game search engine based on RAWG games database API, Axios and React.js, which allows users to look up detailed game information.Also, the `surprise me` button can get a random game recommendation from selected games, which was designed to be a hidden advertisement button.
 
 ## Check on Website
 https://videojuego.herokuapp.com/
