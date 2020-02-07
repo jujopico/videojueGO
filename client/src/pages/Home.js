@@ -14,14 +14,14 @@ return (
       <h1>Welcome to videojueGO!</h1>
       <div className="button-div">
         <button 
-        className="waves-effect waves-light btn-large"
-        onClick={redirectToGames}
+          className="waves-effect waves-light btn-large"
+          onClick={redirectToGames}
         >
         Search for a Game!
         </button>
         <button
-        className="waves-effect waves-light btn-large"
-        onClick={handleRandomGame}
+          className="waves-effect waves-light btn-large"
+          onClick={handleRandomGame}
         >Surprise Me!
         </button>
       </div>

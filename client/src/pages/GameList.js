@@ -5,7 +5,7 @@ import '../App.css'
 import axios from 'axios'
 
 const debounce = (fn, delay) => {
-  let timer
+  let timer;
   return function(...args){
     const context = this
     timer && clearTimeout(timer);

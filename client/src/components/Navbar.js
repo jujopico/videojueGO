@@ -9,9 +9,9 @@ const Navbar = props => {
       <NavLink to="/">
         <img className="LOGO" src={homeLogo} alt="videojueGO" />
       </NavLink>
-    <NavLink className={props.location.pathname === "/games" ? "active" : null} to="/games">Search Games</NavLink>
-    <NavLink className={props.location.pathname === "/AboutUs" ? "active" : null} to="/AboutUs">About Us</NavLink>
-  </nav>
+      <NavLink className={props.location.pathname === "/games" ? "active" : null} to="/games">Search Games</NavLink>
+      <NavLink className={props.location.pathname === "/AboutUs" ? "active" : null} to="/AboutUs">About Us</NavLink>
+    </nav>
   )
 }
 

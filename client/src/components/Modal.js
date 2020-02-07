@@ -16,25 +16,25 @@ export default function Modal() {
   return (
     <div>
         <Dialog
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
         >
-            <DialogTitle id="alert-dialog-title">Are You 18?</DialogTitle>
-            <DialogContent>
-                <DialogContentText id="alert-dialog-description">
-                There's some weird stuff in here...
-                </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={() => window.location.href = "https://mario.nintendo.com" } color="primary">
-                No
-                </Button>
-                <Button onClick={handleClose} color="primary" autoFocus>
-                Yes
-                </Button>
-            </DialogActions>
+          <DialogTitle id="alert-dialog-title">Are You 18?</DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+            There's some weird stuff in here...
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={() => window.location.href = "https://mario.nintendo.com" } color="primary">
+            No
+            </Button>
+            <Button onClick={handleClose} color="primary" autoFocus>
+            Yes
+            </Button>
+          </DialogActions>
         </Dialog>
     </div>
   );
